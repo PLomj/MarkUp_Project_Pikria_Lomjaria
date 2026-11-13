@@ -1,0 +1,3 @@
+# Satoshi is downloaded from Fontshare for local website use.
+# Keep font binaries out of the repository; see assets/fonts/README.md.
+/assets/fonts/*.woff2

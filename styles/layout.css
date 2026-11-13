@@ -1,0 +1,39 @@
+.desktop-home {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 3px 7px 7px;
+  display: grid;
+  grid-template-columns: 259px minmax(0, 1fr);
+  grid-template-rows: 54px 3px minmax(0, 1fr) 4px 81px 3px;
+  grid-template-areas:
+    "top-bar top-bar"
+    ".       ."
+    "library content"
+    "library ."
+    "library player"
+    "library .";
+  column-gap: 7px;
+}
+
+.top-bar {
+  grid-area: top-bar;
+  margin-inline-end: 3px;
+}
+
+.library {
+  grid-area: library;
+}
+
+.home-content {
+  grid-area: content;
+}
+
+.player {
+  grid-area: player;
+}
+
+/* Temporary outlines make the region edges visible without changing their size. */
+.desktop-home > * {
+  outline: 1px solid #898989;
+  outline-offset: -1px;
+}
