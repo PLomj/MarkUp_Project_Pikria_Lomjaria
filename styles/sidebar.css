@@ -4,6 +4,9 @@
   box-sizing: border-box;
   padding-block-start: 11px;
   padding-inline-start: 11px;
+  background-color: #080808;
+  border-end-start-radius: 10px;
+  outline: none;
   color: #898989;
   font-family: Satoshi, system-ui, sans-serif;
   font-weight: 400;
@@ -28,11 +31,12 @@
   min-height: var(--library-icon-size);
 }
 
-.library__icon-space {
+.library__icon {
   flex: 0 0 var(--library-icon-size);
+  width: var(--library-icon-size);
   height: var(--library-icon-size);
 }
 
-.library__icon-space--end {
+.library__icon--end {
   margin-inline-start: auto;
 }
