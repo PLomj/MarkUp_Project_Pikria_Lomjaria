@@ -6,10 +6,47 @@
   <title>Spotify Home</title>
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/navigation.css">
 </head>
 <body class="desktop-home">
   <header class="top-bar">
-    <nav aria-label="Primary">Top navigation</nav>
+    <nav class="primary-navigation" aria-label="Primary">
+      <ul class="primary-navigation__list">
+        <li class="primary-navigation__slot primary-navigation__slot--library">
+          <span class="primary-navigation__item">
+            <span class="top-bar__icon-space" aria-hidden="true"></span>
+            My Library
+          </span>
+        </li>
+        <li class="primary-navigation__slot">
+          <a class="primary-navigation__item" href="./index.html" aria-current="page">
+            <span class="top-bar__icon-space" aria-hidden="true"></span>
+            Home
+          </a>
+        </li>
+        <li class="primary-navigation__slot">
+          <span class="primary-navigation__item">
+            <span class="top-bar__icon-space" aria-hidden="true"></span>
+            Discover
+          </span>
+        </li>
+        <li class="primary-navigation__slot primary-navigation__slot--search">
+          <span class="primary-navigation__item">
+            <span class="top-bar__icon-space" aria-hidden="true"></span>
+            Search
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Reserve space for notifications, lock, friends, settings, and profile. -->
+    <div class="top-bar__utilities" aria-hidden="true">
+      <span class="top-bar__icon-space"></span>
+      <span class="top-bar__icon-space"></span>
+      <span class="top-bar__icon-space"></span>
+      <span class="top-bar__icon-space"></span>
+      <span class="top-bar__avatar-space"></span>
+    </div>
   </header>
 
   <nav class="library" aria-label="Your Library">Library sidebar</nav>

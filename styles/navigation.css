@@ -1,0 +1,83 @@
+@font-face {
+  font-family: Satoshi;
+  src: url("../assets/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.top-bar {
+  --navigation-icon-size: 40.41px;
+  --navigation-muted: #898989;
+  --navigation-current: #e0e0e0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  color: var(--navigation-muted);
+  font-family: Satoshi, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+}
+
+.primary-navigation {
+  flex: 0 1 1032px;
+  align-self: stretch;
+}
+
+.primary-navigation__list {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-navigation__slot {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex: 0 1 210px;
+  padding-inline-start: 15px;
+}
+
+.primary-navigation__slot--library {
+  flex-basis: 262px;
+}
+
+.primary-navigation__slot--search {
+  flex-basis: 350px;
+}
+
+.primary-navigation__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.primary-navigation__item[aria-current="page"] {
+  color: var(--navigation-current);
+  text-decoration: none;
+}
+
+.top-bar__utilities {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 13px;
+}
+
+.top-bar__icon-space,
+.top-bar__avatar-space {
+  flex: none;
+  width: var(--navigation-icon-size);
+  height: var(--navigation-icon-size);
+}
+
+.top-bar__avatar-space {
+  width: 32px;
+  height: 32px;
+}
