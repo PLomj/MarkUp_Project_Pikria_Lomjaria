@@ -1,0 +1,38 @@
+.library {
+  --library-icon-size: 40.41px;
+
+  box-sizing: border-box;
+  padding-block-start: 11px;
+  padding-inline-start: 11px;
+  color: #898989;
+  font-family: Satoshi, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+}
+
+.library__list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.library__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--library-icon-size);
+}
+
+.library__icon-space {
+  flex: 0 0 var(--library-icon-size);
+  height: var(--library-icon-size);
+}
+
+.library__icon-space--end {
+  margin-inline-start: auto;
+}
