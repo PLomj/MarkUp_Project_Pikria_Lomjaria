@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  outline: none;
   gap: 13px;
   color: var(--navigation-muted);
   font-family: Satoshi, system-ui, sans-serif;
@@ -47,6 +48,10 @@
   flex-basis: 262px;
 }
 
+.primary-navigation__slot--home {
+  padding-inline-start: 4px;
+}
+
 .primary-navigation__slot--search {
   flex-basis: 350px;
 }
@@ -59,6 +64,12 @@
 }
 
 .primary-navigation__item[aria-current="page"] {
+  box-sizing: border-box;
+  width: 196px;
+  height: 46px;
+  padding-inline: 11px;
+  background-color: #111111;
+  border-radius: 10px;
   color: var(--navigation-current);
   text-decoration: none;
 }
@@ -70,14 +81,15 @@
   gap: 13px;
 }
 
-.top-bar__icon-space,
-.top-bar__avatar-space {
+.top-bar__icon,
+.top-bar__avatar {
   flex: none;
   width: var(--navigation-icon-size);
   height: var(--navigation-icon-size);
 }
 
-.top-bar__avatar-space {
+.top-bar__avatar {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
 }
