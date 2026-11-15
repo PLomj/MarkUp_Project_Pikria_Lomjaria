@@ -94,6 +94,230 @@
 
   <main class="home-content">
     <h1>Spotify Home</h1>
+    <!-- Keep the unstyled feed out of the Grid until the layout step. -->
+    <div class="home-feed" hidden>
+      <div class="home-filters">
+        <ul class="home-filters__list" aria-label="Content categories">
+          <li class="home-filters__item--selected">All</li>
+          <li>Music</li>
+          <li>Podcasts</li>
+          <li>Audiobooks</li>
+        </ul>
+        <span class="home-filters__adjustments" aria-hidden="true"></span>
+      </div>
+
+      <section class="home-section" aria-labelledby="made-for-you">
+        <header class="home-section__header">
+          <h2 id="made-for-you">Made For You</h2>
+          <div class="home-section__controls" aria-hidden="true">
+            <span class="home-section__previous"></span>
+            <span class="home-section__next"></span>
+            <span class="home-section__more"></span>
+          </div>
+        </header>
+        <ul class="home-section__cards">
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Discover Weekly</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Your weekly mixtape of fresh music.</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daily Mix 1</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Linkin Park, System Of A Down, Coal Chamber...</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daily Mix 2</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Avril Lavigne, Lorde, Charli XCX and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daily Mix 3</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">The Strokes, Martin Garrix, MGMT and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daily Mix 4</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+          </li>
+          <li class="home-card">
+            <!-- The reference labels this card Daily Mix 5, but its cover reads Daily Mix 6. -->
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daily Mix 5</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Nirvana Radio</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">The Strokes, Martin Garrix, MGMT and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Fall Out Boy Radio</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">With Panic! At The Disco, The All-American Rejects,...</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Adele Radio</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">With Sia, Sam Smith, P!nk and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daft Punk Radio</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">With Justice, The Chemical Brothers, ...</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>ABBA Radio</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">With Honey M., Bee Gees, Bonnie Tyler, and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daily Mix 6</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">One Direction, Avril Lavigne, Lorde, and more</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="home-section" aria-labelledby="top-mixes">
+        <header class="home-section__header">
+          <h2 id="top-mixes">Your top mixes</h2>
+          <div class="home-section__controls" aria-hidden="true">
+            <span class="home-section__previous"></span>
+            <span class="home-section__next"></span>
+            <span class="home-section__more"></span>
+          </div>
+        </header>
+        <ul class="home-section__cards">
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Rock Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Chill Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Pop Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Daft Punk Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Daft Punk, MGMT, Muse, and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Happy Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">The Turtles, Van Morrison, ABBA and more</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>David Bowie Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Soft Cell, The Who and The Clash</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>Upbeat Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <div class="home-card__title-row">
+              <h3>60s Mix</h3>
+              <span class="home-card__count">50</span>
+            </div>
+            <p class="home-card__description">Chuck Berry, Skeeter David, Van Morrison and...</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="home-section" aria-labelledby="favorite-artists">
+        <header class="home-section__header">
+          <h2 id="favorite-artists">Your favorite artists</h2>
+          <div class="home-section__controls" aria-hidden="true">
+            <span class="home-section__previous"></span>
+            <span class="home-section__next"></span>
+            <span class="home-section__more"></span>
+          </div>
+        </header>
+        <ul class="home-section__cards">
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <h3>Guns N’ Roses</h3>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <h3>Daft Punk</h3>
+          </li>
+          <li class="home-card">
+            <div class="home-card__artwork" aria-hidden="true"></div>
+            <h3>David Bowie</h3>
+          </li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <section class="player" aria-label="Player">Bottom player</section>
