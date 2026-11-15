@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/navigation.css">
   <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/main-content.css">
 </head>
 <body class="desktop-home">
   <header class="top-bar">
@@ -93,9 +94,8 @@
   </nav>
 
   <main class="home-content">
-    <h1>Spotify Home</h1>
-    <!-- Keep the unstyled feed out of the Grid until the layout step. -->
-    <div class="home-feed" hidden>
+    <h1 class="visually-hidden">Spotify Home</h1>
+    <div class="home-feed">
       <div class="home-filters">
         <ul class="home-filters__list" aria-label="Content categories">
           <li class="home-filters__item--selected">All</li>
