@@ -221,14 +221,3 @@
   font-size: 12px;
   line-height: 16px;
 }
-
-.home-section[aria-labelledby="favorite-artists"] .home-card {
-  flex-basis: 170.58px;
-  text-align: center;
-}
-
-.home-section[aria-labelledby="favorite-artists"] .home-card__artwork {
-  height: 170.58px;
-  margin-block: 0 12px;
-  border-radius: 50%;
-}
