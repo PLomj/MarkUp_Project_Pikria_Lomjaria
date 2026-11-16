@@ -1,0 +1,127 @@
+.player {
+  --player-primary: #e0e0e0;
+  --player-muted: #898989;
+
+  box-sizing: border-box;
+  display: grid;
+  /* The first three tracks put the artwork 702px from the shell's left edge. */
+  grid-template-columns: 214.09px 467.91px 233px minmax(0, 1fr) 348.03px;
+  align-items: center;
+  min-width: 0;
+  padding-inline: 20px 18.32px;
+  overflow-x: auto;
+  background: #333842;
+  border-radius: 10px;
+  outline: none;
+  color: var(--player-muted);
+  font: 400 14px / 19px Satoshi, system-ui, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.player__playback,
+.player__timeline,
+.player__track,
+.player__utilities {
+  display: flex;
+  align-items: center;
+}
+
+.player__icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+
+.player__playback {
+  gap: 4.75px;
+  width: max-content;
+}
+
+.player__playback .player__icon {
+  width: 38.02px;
+  height: 38.02px;
+}
+
+.player__timeline {
+  justify-content: space-between;
+  width: 440.87px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
+
+.player__current-time {
+  flex: 0 0 25.73px;
+}
+
+.player__total-time {
+  flex: 0 0 33.96px;
+}
+
+.player__progress-track {
+  flex: 0 0 317px;
+  height: 3px;
+  border-radius: 0.5px;
+  background: rgba(137, 137, 137, 0.27);
+}
+
+.player__progress-fill {
+  display: block;
+  width: 44.92%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--player-primary);
+}
+
+.player__track {
+  gap: 10px;
+}
+
+.player__artwork {
+  flex: 0 0 51px;
+  height: 51px;
+  border-radius: 3px;
+}
+
+.player__track-text {
+  white-space: nowrap;
+}
+
+.player__track-title {
+  color: var(--player-primary);
+}
+
+.player__utilities {
+  grid-column: 5;
+  justify-content: space-between;
+}
+
+.player__add-to-playlist,
+.player__lyrics {
+  width: 39.5px;
+  height: 39.5px;
+}
+
+.player__device-shaped-control {
+  width: 40.41px;
+  height: 40.41px;
+}
+
+.player__divider {
+  flex: 0 0 17px;
+  display: grid;
+  place-items: center;
+  height: 43px;
+}
+
+.player__divider::before {
+  content: "";
+  width: 2px;
+  height: 36px;
+  background: rgba(137, 137, 137, 0.3);
+}
+
+.player__dj {
+  width: 47.78px;
+  height: 47.78px;
+}
