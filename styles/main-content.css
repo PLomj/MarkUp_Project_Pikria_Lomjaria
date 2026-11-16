@@ -97,9 +97,15 @@
 }
 
 .home-filters__adjustments,
-.home-section__controls span {
-  flex: 0 0 var(--home-control-size);
+.home-section__controls img {
+  flex: 0 0 auto;
+  width: var(--home-control-size);
   height: var(--home-control-size);
+}
+
+.home-section__controls .home-section__more {
+  width: 40px;
+  height: 40px;
 }
 
 .home-section {
@@ -123,6 +129,7 @@
 
 .home-section__controls {
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 
