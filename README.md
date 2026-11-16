@@ -1,11 +1,13 @@
+https://markupprojectpikrialomjaria.vercel.app/
+
 # Spotify Redesign — Responsive Markup
 
 A static recreation of the Spotify Home screens from Figma, built with HTML5 and CSS3. Desktop and mobile share one `index.html`. Mobile styles apply at viewport widths of **900 px and below**.
 
-| Layout | Figma reference viewport |
-| --- | --- |
-| Desktop Home | 1771 × 1024 CSS px |
-| Mobile Home | 390 × 844 CSS px |
+| Layout       | Figma reference viewport |
+| ------------ | ------------------------ |
+| Desktop Home | 1771 × 1024 CSS px       |
+| Mobile Home  | 390 × 844 CSS px         |
 
 ## Run locally
 
