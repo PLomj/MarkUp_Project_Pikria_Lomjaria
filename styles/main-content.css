@@ -217,6 +217,10 @@
   white-space: nowrap;
 }
 
+.home-card:has(img[src="assets/images/main-content/fall-out-boy-radio.png"]) .home-card__title-row h3 {
+  max-width: 120px;
+}
+
 .home-card__count {
   flex-shrink: 0;
   color: var(--cover-accent, inherit);
