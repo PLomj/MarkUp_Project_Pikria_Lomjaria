@@ -10,4 +10,4 @@ Desktop and Mobile Home load Satoshi locally through CSS `@font-face` rules in `
 
 Download Satoshi directly from [Fontshare](https://www.fontshare.com/fonts/satoshi) and place the three unmodified WOFF2 files in this folder using the filenames above. The stylesheet falls back to system fonts when these files are missing.
 
-The bundled [Fontshare license](FFL.txt) permits the licensee to self-host the font for their own websites and restricts redistribution through repositories. The WOFF2 files are intentionally excluded by `.gitignore`. Keep the binaries out of Git and refer to `FFL.txt` for the full terms.
+The bundled [Fontshare license](FFL.txt) permits the licensee to self-host the font for their own websites and restricts redistribution through repositories. Git currently tracks all three WOFF2 files listed above. Refer to `FFL.txt` for the full terms.
