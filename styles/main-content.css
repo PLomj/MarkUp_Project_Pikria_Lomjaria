@@ -221,6 +221,15 @@
   max-width: 120px;
 }
 
+.home-card:has(h3 > .spotify-link:focus-visible) {
+  outline: 2px solid #e0e0e0;
+  outline-offset: -2px;
+}
+
+.home-card__title-row .spotify-link:focus-visible {
+  outline: none;
+}
+
 .home-card__count {
   flex-shrink: 0;
   color: var(--cover-accent, inherit);

@@ -81,6 +81,15 @@
     background: #202020;
   }
 
+  .mobile-quick-access li > .spotify-link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    align-self: stretch;
+    min-width: 0;
+    gap: 8px;
+  }
+
   .mobile-quick-access__artwork {
     flex: 0 0 auto;
     width: 58px;
@@ -256,7 +265,8 @@
     padding: 12px 0 0;
   }
 
-  .mobile-bottom-nav li {
+  .mobile-bottom-nav li:not(:has(> .spotify-link)),
+  .mobile-bottom-nav li > .spotify-link {
     display: grid;
     grid-template-rows: 36px auto;
     justify-items: center;
@@ -269,7 +279,7 @@
     height: 36px;
   }
 
-  .mobile-bottom-nav [aria-current="page"] {
+  .mobile-bottom-nav__item--selected {
     color: #e0e0e0;
   }
 }

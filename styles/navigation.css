@@ -63,7 +63,7 @@
   white-space: nowrap;
 }
 
-.primary-navigation__item[aria-current="page"] {
+.primary-navigation__slot--home .primary-navigation__item {
   box-sizing: border-box;
   width: 196px;
   height: 46px;

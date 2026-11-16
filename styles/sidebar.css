@@ -24,11 +24,18 @@
   list-style: none;
 }
 
-.library__row {
+.library__row,
+.library__row > .spotify-link {
   display: flex;
   align-items: center;
   gap: 10px;
   min-height: var(--library-icon-size);
+}
+
+.library__row > .spotify-link {
+  flex: 1;
+  align-self: stretch;
+  min-width: 0;
 }
 
 .library__icon {

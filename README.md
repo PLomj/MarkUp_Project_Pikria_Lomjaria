@@ -20,7 +20,7 @@ A static recreation of the Spotify Home screens from Figma, built with HTML5 and
 - **Desktop:** Top Navigation, Library Sidebar, Main Content with category filters and two recommendation rows, and a Bottom Player showing track metadata and a static progress bar.
 - **Mobile:** Music, Podcasts, and Audiobooks filters, six quick-access cards, **Made For You** and **Your top mixes** with horizontal scrolling, a fixed mini-player, and a five-item bottom navigation: Home, Discover, Search, Library, and Me.
 
-The mobile device status bar and extra recommendation sections were excluded by agreement. The project uses HTML and CSS only. The filters, search, destination icons, and player controls reproduce visual states. They do not provide filtering, search, destination navigation, or audio playback.
+The mobile device status bar and extra recommendation sections were excluded by agreement. The project uses HTML and CSS only. Selected navigation items and cards open Spotify in a new tab. Recommendation playlists and mixes open Spotify Search results. Filters and playback controls remain visual only, and the project has no audio playback or JavaScript.
 
 ## Known limitations
 
@@ -30,7 +30,7 @@ The mobile device status bar and extra recommendation sections were excluded by 
 
 ## Accessibility
 
-The page has a main landmark, a page heading, named navigation regions, and section headings. Decorative images use empty alt text when neighboring text already provides the name. CSS truncation keeps full card titles in the HTML. Only the navigation for the current layout is exposed, and static controls are kept out of the keyboard tab order. Both mobile recommendation rows can be reached and scrolled by keyboard in Chrome. Muted player text follows the Figma palette and has limited contrast.
+The page has a main landmark, a page heading, named navigation regions, and section headings. Decorative images use empty alt text when neighboring text already provides the name. CSS truncation keeps full card titles in the HTML. Only the navigation for the current layout is exposed, and static controls are kept out of the keyboard tab order. In Chrome, tabbing through recommendation links brings the focused cards into view. Muted player text follows the Figma palette and has limited contrast.
 
 ## Project structure
 
