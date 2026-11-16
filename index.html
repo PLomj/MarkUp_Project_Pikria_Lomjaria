@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/sidebar.css">
   <link rel="stylesheet" href="styles/main-content.css">
   <link rel="stylesheet" href="styles/player.css">
+  <link rel="stylesheet" href="styles/mobile.css">
 </head>
 <body class="desktop-home">
   <header class="top-bar">
@@ -107,6 +108,32 @@
         <img class="home-filters__adjustments" src="assets/icons/home-adjustments.svg" alt="">
       </div>
 
+      <ul class="mobile-quick-access" aria-label="Quick access">
+        <li>
+          <img class="mobile-quick-access__artwork" src="assets/images/player/get-lucky.png" alt="">
+          <span class="mobile-quick-access__label">Get Lucky</span>
+        </li>
+        <li>
+          <img class="mobile-quick-access__artwork" src="assets/images/main-content/daily-mix-2.png" alt="">
+          <span class="mobile-quick-access__label">Daily Mix 2</span>
+        </li>
+        <li>
+          <img class="mobile-quick-access__artwork" src="assets/images/main-content/daily-mix-1.png" alt="">
+          <span class="mobile-quick-access__label">Daily Mix 1</span>
+        </li>
+        <li>
+          <img class="mobile-quick-access__artwork" src="assets/images/player/get-lucky.png" alt="">
+          <span class="mobile-quick-access__label">Instant Crush</span>
+        </li>
+        <li>
+          <span class="mobile-quick-access__artwork mobile-quick-access__artwork--empty" aria-hidden="true"></span>
+          <span class="mobile-quick-access__label">Around the world</span>
+        </li>
+        <li>
+          <img class="mobile-quick-access__artwork" src="assets/images/main-content/rock-mix.png" alt="">
+          <span class="mobile-quick-access__label">Rock Mix</span>
+        </li>
+      </ul>
       <section class="home-section" aria-labelledby="made-for-you">
         <header class="home-section__header">
           <h2 id="made-for-you">Made For You</h2>
@@ -356,6 +383,10 @@
       </div>
     </div>
 
+    <div class="mobile-player-actions" aria-hidden="true">
+      <span class="mobile-icon-placeholder"></span>
+      <span class="mobile-icon-placeholder"></span>
+    </div>
     <div class="player__utilities" aria-hidden="true">
       <img class="player__icon player__like" src="assets/icons/player-like.svg" alt="">
       <img class="player__icon player__add-to-playlist" src="assets/icons/player-add-to-playlist.svg" alt="">
@@ -367,5 +398,29 @@
       <img class="player__icon player__queue" src="assets/icons/player-queue.svg" alt="">
     </div>
   </section>
+  <nav class="mobile-bottom-nav" aria-label="Mobile primary">
+    <ul>
+      <li aria-current="page">
+        <img src="assets/icons/home-filled.svg" alt="">
+        <span>Home</span>
+      </li>
+      <li>
+        <img src="assets/icons/discover.svg" alt="">
+        <span>Discover</span>
+      </li>
+      <li>
+        <img src="assets/icons/search.svg" alt="">
+        <span>Search</span>
+      </li>
+      <li>
+        <img src="assets/icons/library.svg" alt="">
+        <span>Library</span>
+      </li>
+      <li>
+        <span class="mobile-icon-placeholder" aria-hidden="true"></span>
+        <span>Me</span>
+      </li>
+    </ul>
+  </nav>
 </body>
 </html>
