@@ -1,6 +1,6 @@
-https://markupprojectpikrialomjaria.vercel.app/
-
 # Spotify Redesign — Responsive Markup
+
+[Project demo](https://markupprojectpikrialomjaria.vercel.app/) · [GitHub repository](https://github.com/PLomj/MarkUp_Project_Pikria_Lomjaria)
 
 A static recreation of the Spotify Home screens from Figma, built with HTML5 and CSS3. Desktop and mobile share one `index.html`. Mobile styles apply at viewport widths of **900 px and below**.
 
@@ -13,7 +13,7 @@ A static recreation of the Spotify Home screens from Figma, built with HTML5 and
 
 1. Open [`index.html`](index.html) in Chrome. No build step, server, or dependencies are required.
 2. Use Chrome DevTools' Responsive mode to check the reference viewport sizes above.
-3. To reproduce the verified typography, download Satoshi directly from [Fontshare](https://www.fontshare.com/fonts/satoshi) and place its Regular, Medium, and Bold WOFF2 files in `assets/fonts/`. See the [font setup and license notes](assets/fonts/README.md) for the exact filenames. The page uses a system fallback if the font files are absent.
+3. The page loads Satoshi Regular, Medium, and Bold from the WOFF2 files currently tracked in `assets/fonts/`. If the files are absent, download them directly from [Fontshare](https://www.fontshare.com/fonts/satoshi) and place them in that folder, or use the system fallback. See the [bundled font license](assets/fonts/FFL.txt) for the terms, including restrictions on redistribution.
 
 ## Implemented scope
 
@@ -35,12 +35,15 @@ The page has a main landmark, a page heading, named navigation regions, and sect
 ## Project structure
 
 ```text
+.gitignore          Git ignore configuration
+AI-Log.md           AI-assisted workflow and learning notes
+README.md           Project overview and setup
 index.html          Shared Desktop and Mobile Home markup
 styles/             Base, Grid, navigation, sidebar, content, player, and mobile CSS
-assets/icons/       Original SVG icons
-assets/images/      Original cover artwork, avatar, and player images
-assets/fonts/       Font setup and license; local WOFF2 files are ignored by Git
-read.me             Raw Figma CSS export used as a design reference
+assets/
+├── icons/          Original SVG icons
+├── images/         Original cover artwork, avatar, and player images
+└── fonts/          Satoshi WOFF2 files, setup notes, and bundled license
 ```
 
 ## Figma references
