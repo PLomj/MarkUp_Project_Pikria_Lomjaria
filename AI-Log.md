@@ -198,3 +198,21 @@ verify.
    reviewed change. Small tasks, explicit constraints, visual checks and
    controlled commits made the project easier to understand and safer to
    finish.
+
+   Final reflection
+   The most useful part of working with AI was not receiving ready-made
+   HTML and CSS. It was learning how to ask better questions and how to
+   recognize when a proposed solution was incomplete.
+   There were real obstacles: Figma access permissions, asset-export
+   limitations, exact visual matching, responsive fixed-element
+   clearance, CSS specificity, and uncertain Spotify playlist
+   destinations. Some were solved by changing the workflow, some by
+   inspecting actual CSS, and some by making decisions that AI could not
+   make reliably on its own.
+   I used ChatGPT to plan tasks, clarify concepts and review Codex reports.
+   I used Codex to inspect the project, implement approved changes and run
+   focused checks. I retained responsibility for choosing requirements,
+   accepting compromises and approving commits.
+   The finished project is a responsive HTML/CSS-only Spotify redesign
+   with external Spotify navigation. It does not implement real music
+   playback, authentication or JavaScript-driven application behavior.
