@@ -96,3 +96,105 @@ verify.
    What I learned: Grid is useful for positioning large regions in rows
    and columns, while Flexbox is useful for aligning elements within those
    regions. They are complementary, not competing technologies.
+
+5. Matching the desktop design instead of accepting approximate results
+   The desktop reference was 1771 × 1024. The layout needed accurate
+   placement of the header, sidebar, content panel and player, not just a
+   page that looked generally similar.
+   Representative prompt: > Compare the current desktop markup with
+   the Figma reference at 1771 × 1024. Report differences in region
+   positions, dimensions, spacing and artwork. Make only narrowly scoped
+   changes and preserve the rest of the page.
+   Problem and decision: A visually plausible result was not enough. I
+   used specific reference dimensions and repeated visual checks rather
+   than accepting the first generated layout. The verified desktop
+   positions included the main content starting at x = 273, y = 60 and
+   the player starting at y = 933.
+   What I learned: AI-generated CSS still needs a measurable acceptance
+   criterion. Precise viewport checks make feedback actionable and reduce
+   unrelated changes.
+6. Building the mobile layout without breaking desktop
+   The mobile reference was 390 × 844, with six quick-access tiles,
+   horizontally scrolling recommendation cards, a fixed mini-player and a
+   fixed bottom navigation.
+   Representative prompt: > Implement the mobile design using a
+   breakpoint at 900px. Reuse the existing HTML and shared card markup
+   where possible. Keep the desktop layout unchanged and verify the mobile
+   mini-player, bottom navigation and scrolling behavior.
+   The mobile rules switch the outer page from the desktop Grid to normal
+   block flow at 900px and below. However, Grid is still used for the
+   two-column quick-access tiles and bottom navigation. Flexbox
+   continues to arrange the contents of cards and controls.
+   Problem and decision: Fixed bottom elements can cover the final
+   content while scrolling. The solution was to reserve bottom space in the
+   feed. The audit recorded 172px of clearance: 95px navigation +
+   61px player + 16px additional spacing.
+   What I learned: Responsive design is not simply shrinking desktop
+   widths. It can require a different layout flow, different visibility
+   rules and explicit room for fixed elements.
+7. Correcting small visual and CSS-cascade details
+   After the broad layout worked, smaller details still mattered:
+   horizontal card scrolling, image sizes, text truncation and CSS rules
+   overriding one another.
+   Representative prompt: > Inspect the recommendation cards and
+   explain why a specific title width or card size differs from the general
+   mobile rule. Check selector specificity and do not change unrelated
+   cards.
+   One documented example was the Fall Out Boy Radio title. Its
+   specific selector set a 120px maximum width, while a general mobile
+   heading rule used 100px. The more specific selector could win even
+   though it appeared in an earlier stylesheet.
+   Another example was the recommendation card width: desktop used
+   flex: 0 0 170px, while mobile changed only flex-basis to 141px.
+   The cards still did not grow or shrink.
+   What I learned: When a later CSS rule seems ineffective, the reason
+   may be specificity rather than file order. I also learned to inspect
+   shorthand properties before overriding only one part of them.
+8. Making Spotify links work without changing the design
+   The initial assignment was static markup, but I later decided to make
+   navigation links open real Spotify pages. I wanted to preserve every
+   visual detail and avoid adding JavaScript.
+   I first requested a read-only link audit. Codex identified verified
+   destinations, ambiguous playlist names and controls that should remain
+   static.
+   Representative prompt: > Audit the existing navigation and cards.
+   Suggest Spotify destinations without editing files. Distinguish exact
+   track URLs from personalized playlists that should use Spotify Search.
+   Keep playback controls and filters static.
+   Codex could not reliably identify exact personalized playlists from the
+   artwork alone. I made three explicit decisions:
+   Discover should open Spotify's Made For You hub.
+   Around the world should open Daft Punk's specific track.
+   All recommendation cards should open the corresponding Spotify
+   Search results rather than invented playlist IDs.
+   I then approved a narrowly scoped implementation prompt requiring native
+   anchors, new-tab behavior, keyboard focus, and no visual redesign.
+   Result: Codex reported 38 Spotify links: desktop navigation,
+   sidebar, mobile quick-access tiles, shared recommendation cards and
+   mobile bottom navigation. The browser checks reported pixel-for-pixel
+   matching screenshots at the desktop and mobile reference sizes.
+   Personalized Spotify results and signed-in library content were not
+   independently verified.
+   What I learned: When AI cannot establish an exact destination, the
+   correct solution is to make an explicit product decision, not invent
+   data.
+9. Reviewing, testing and committing only approved changes
+   Throughout the project, I separated implementation from review and Git
+   operations. I asked Codex to inspect changes, report test results and
+   wait for approval before committing or pushing.
+   Representative prompt: > Validate the approved Spotify link changes
+   at desktop and mobile reference sizes, test the 900/901px breakpoint,
+   check keyboard focus and external-link attributes, and report the
+   changed files. Do not commit or push until I approve.
+   The link implementation report listed seven modified files, no asset
+   changes, a clean git diff --check, and no console errors or broken
+   images in the checked browser sessions. After review, I authorized a
+   separate commit-and-push step.
+   Final recorded commit: 194cbfe ---
+   feat: add external Spotify navigation links.
+   The final Git report confirmed a normal fast-forward push, a clean
+   working tree and synchronized local and remote main branches.
+   What I learned: A successful AI response is not the same as a
+   reviewed change. Small tasks, explicit constraints, visual checks and
+   controlled commits made the project easier to understand and safer to
+   finish.
